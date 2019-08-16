@@ -6,3 +6,4 @@ function imprimiNombreEnMayusculas(nombre) {
 }
 
 imprimiNombreEnMayusculas(nombre);
+imprimiNombreEnMayusculas('Abdel');
