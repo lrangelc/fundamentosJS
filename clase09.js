@@ -23,6 +23,7 @@ var nuevaPersona = {
     ...persona
 };
 
+//Nuevo objeto y asigna los valores de las propiedades
 var tt = {...persona};
 
 auxPersona.apellido = 'Castro';
