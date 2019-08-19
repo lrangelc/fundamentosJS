@@ -6,4 +6,4 @@ do {
     contador++;
 } while (!llueve())
 
-console.log(`Revise si estaba lloviendo ${contador} ${contador >1?'veces':'vez'}`);
+console.log(`Revise si estaba lloviendo ${contador} ${contador > 1 ? 'veces' : 'vez'}`);
