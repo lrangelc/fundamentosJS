@@ -11,6 +11,7 @@ function obtenerPersonaje(id, callback) {
         });
 }
 
+
 obtenerPersonaje(1, function (data) {
     console.log(`Hi! my name is ${data.name}`);
 
