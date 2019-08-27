@@ -117,12 +117,12 @@
                     violeta,
                     naranja,
                     verde
-                }
+                };
             }
 
             generarSecuencia() {
                 this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random() * 4));
-
+            console.log(this.secuencia)
             }
 
             siguienteNivel() {
@@ -143,10 +143,19 @@
             }
 
             iluminarSecuencia() {
-                for (var i = 0; i < this.nivel; i++) {
-                    var color = this.transformarNumeroAColor(this.secuencia[i]);
-
+                for (let i = 0; i < this.nivel; i++) {
+                    const color = this.transformarNumeroAColor(this.secuencia[i]);
+                    setTimeout(() => this.iluminarColor(color), 1000 * i);
                 }
+            }
+
+            iluminarColor(color) {
+                this.colores[color].classList.add('light');
+                setTimeout(() => this.apagarColor(color), 350);
+            }
+
+            apagarColor(color) {
+                this.colores[color].classList.remove('light');
             }
         }
 
