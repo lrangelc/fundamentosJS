@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 42 - var, let y const: las diferencias entre ellos</title>
+</head>
+
+<body>
+    <script>
+        var luis = {
+            nombre: 'Luis',
+            apellido: 'Rangel',
+            edad: 39
+        };
+
+        function esMayorDeEdad(persona) {
+            var mensaje;
+            if (persona.edad >= 18) {
+                mensaje = 'Es mayor de edad';
+            } else {
+                mensaje = 'Es menor de edad';
+            }
+            console.log(mensaje);
+        }
+
+        esMayorDeEdad(luis);
+
+        for (let i = 0; i < 10; i++) {
+            const ax = i + 15;
+            console.log(i);
+            console.log(ax);
+        }
+    </script>
+
+</body>
+
+</html>
