@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 44 - Funciones recursivas</title>
+</head>
+
+<body>
+    <script>
+        function divisionEntera(dividendo, divisor) {
+            if (dividendo < divisor) {
+                return 0;
+            }
+            return 1 + divisionEntera(dividendo-divisor,divisor);
+        }
+
+        console.log(divisionEntera(26, 4));
+    </script>
+
+</body>
+
+</html>
