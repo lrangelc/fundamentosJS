@@ -102,7 +102,7 @@
         const naranja = document.getElementById('naranja');
         const verde = document.getElementById('verde');
         const btnEmpezar = document.getElementById('btnEmpezar');
-        const ULTIMO_NIVEL = 3;
+        const ULTIMO_NIVEL = 10;
 
         class Juego {
             constructor() {
@@ -140,9 +140,16 @@
             }
 
             siguienteNivel() {
-                this.subnivel = 0;
-                this.iluminarSecuencia();
-                this.agregarEventosClick();
+                swal("Simon Dice", `Nivel ${this.nivel}. Haz click en el boton OK para continuar`, "info")
+                    .then(() => {
+                        setTimeout(()=> {
+                            this.subnivel = 0;
+                        this.iluminarSecuencia();
+                        this.agregarEventosClick();
+                        }, 1500);
+
+                        
+                    });
             }
 
             transformarNumeroAColor(numero) {
