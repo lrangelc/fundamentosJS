@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 48 - Cambiando de contexto al llamar a una función</title>
+</head>
+
+<body>
+    <script>
+        const luis = {
+            nombre: 'Luis',
+            apellido: 'Rangel',
+            edad: 39
+        };
+
+        const rocio = {
+            nombre: 'Rocio',
+            apellido: 'Rangel Pinzon',
+            edad: 9
+        }
+
+        function saludar(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombre es ${this.nombre}`);
+        }
+
+        //bind devuelve una funcion con el contexto y/o parametros asignados
+        const saludarLuis = saludar.bind(luis);
+        const saludarOshi = saludar.bind(rocio);
+
+        saludarLuis();
+        saludarOshi();
+
+        setTimeout(saludar.bind(luis, 'Hola Che'), 1000);
+
+        saludar.call(rocio, 'Hola paisa');
+
+        saludar.apply(rocio, ['Hola amiguis']);
+        
+    </script>
+
+</body>
+
+</html>
